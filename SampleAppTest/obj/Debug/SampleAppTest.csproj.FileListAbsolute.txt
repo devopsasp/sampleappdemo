@@ -1,0 +1,17 @@
+F:\pipedemo\SampleAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\pipedemo\SampleAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\pipedemo\SampleAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\pipedemo\SampleAppTest\bin\Debug\SampleAppTest.dll
+F:\pipedemo\SampleAppTest\bin\Debug\SampleAppTest.pdb
+F:\pipedemo\SampleAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+F:\pipedemo\SampleAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+F:\pipedemo\SampleAppTest\bin\Debug\SampleAppCalculator.exe
+F:\pipedemo\SampleAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+F:\pipedemo\SampleAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+F:\pipedemo\SampleAppTest\bin\Debug\SampleAppCalculator.pdb
+F:\pipedemo\SampleAppTest\bin\Debug\SampleAppCalculator.exe.config
+F:\pipedemo\SampleAppTest\obj\Debug\SampleAppTest.csprojAssemblyReference.cache
+F:\pipedemo\SampleAppTest\obj\Debug\SampleAppTest.csproj.CoreCompileInputs.cache
+F:\pipedemo\SampleAppTest\obj\Debug\SampleAppTest.csproj.CopyComplete
+F:\pipedemo\SampleAppTest\obj\Debug\SampleAppTest.dll
+F:\pipedemo\SampleAppTest\obj\Debug\SampleAppTest.pdb

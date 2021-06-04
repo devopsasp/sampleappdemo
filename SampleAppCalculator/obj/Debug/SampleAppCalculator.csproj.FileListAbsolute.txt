@@ -1,0 +1,7 @@
+F:\pipedemo\SampleAppCalculator\bin\Debug\SampleAppCalculator.exe.config
+F:\pipedemo\SampleAppCalculator\bin\Debug\SampleAppCalculator.exe
+F:\pipedemo\SampleAppCalculator\bin\Debug\SampleAppCalculator.pdb
+F:\pipedemo\SampleAppCalculator\obj\Debug\SampleAppCalculator.csprojAssemblyReference.cache
+F:\pipedemo\SampleAppCalculator\obj\Debug\SampleAppCalculator.csproj.CoreCompileInputs.cache
+F:\pipedemo\SampleAppCalculator\obj\Debug\SampleAppCalculator.exe
+F:\pipedemo\SampleAppCalculator\obj\Debug\SampleAppCalculator.pdb
