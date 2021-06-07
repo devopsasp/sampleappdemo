@@ -1,31 +1,27 @@
 trigger:
 - master
 
-
 pool:
        name: Default
        demands: mycap
 
 stages:
-  - stage: Welcome
-    jobs:
-    - job: PrintMessage
-     
-      steps:
-        - script: echo 'Hello To User!!!'
-    - job: AssignTask
-     
-      steps:
-        - script: echo 'Different Tasks are Building ,testing and Packaging'
-   
-  - stage: StartTask
-    jobs:
-    - job: Task1
-      steps:
-        - script: echo 'Task 1 started'
+- stage: BUILD
+  jobs:
+  - job: BUILD_TASK
+  variables:
+    solution: '**/*.sln'
+    buildPlatform: 'Any CPU'
+    buildConfiguration: 'Release'
 
-  - stage: EndTask
-    jobs:
-    - job: Task2
-      steps:
-      - script: echo 'Task 1 ended'   
+    steps:
+    - task: NuGetToolInstaller@1
+    - task: NuGetCommand@2
+      inputs:
+        restoreSolution: '$(solution)'
+    - task: VSBuild@1
+      inputs:
+         solution: '$(solution)'
+         platform: '$(buildPlatform)'
+         configuration: '$(buildConfiguration)'
+         
