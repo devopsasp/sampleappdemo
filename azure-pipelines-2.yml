@@ -4,6 +4,11 @@ trigger:
 stages:
   - stage: Build
     jobs:
+      - job: PrintMessage
+        pool:
+          name: Default
+          demands: mycap1
+          
       - job: Build
         pool:
          name: Default
@@ -26,6 +31,7 @@ stages:
            configuration: '$(buildConfiguration)'
 
         - script: echo 'Building application'
+        
   - stage: Test
     jobs:
        - job: Test
