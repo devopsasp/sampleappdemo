@@ -8,7 +8,11 @@ stages:
         pool:
           name: Default
           demands: mycap1
-          
+        steps:
+          - script: echo '****************'
+          - script: echo 'starting with test'
+          - script: echo '*****************'
+           
       - job: Build
         pool:
          name: Default
