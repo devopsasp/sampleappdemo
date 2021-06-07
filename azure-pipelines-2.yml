@@ -9,7 +9,7 @@ stages:
          name: Defult
          demands: mycap
         steps:
-        - task: VSBuild@1
+        
         - script: echo 'Building application'
   - stage: Test
     jobs:
@@ -18,6 +18,5 @@ stages:
           name: Default
           demands: mycap1
          steps:
-           - task: VSTest@2
            - script: echo 'Testing application'
   
