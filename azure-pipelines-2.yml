@@ -17,3 +17,15 @@ stages:
      
       steps:
         - script: echo 'Different Tasks are Building ,testing and Packaging'
+   
+  - stage: StartTask
+    jobs:
+    - job: Task1
+      steps:
+        - script: echo 'Task 1 started'
+
+  - stage: EndTask
+    jobs:
+    - job: Task2
+      steps:
+      - script: echo 'Task 1 ended'   
