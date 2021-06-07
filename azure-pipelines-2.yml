@@ -35,4 +35,4 @@ steps:
     configuration: '$(buildConfiguration)'
 
 
-- task: PublishTestResults@1
+- task: PublishTestResults@2
