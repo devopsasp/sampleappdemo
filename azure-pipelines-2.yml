@@ -30,4 +30,28 @@ stages:
            platform: '$(buildPlatform)'
            configuration: '$(buildConfiguration)' 
           
+  - stage: Test
+    jobs:
+      - job: TestJob
+    pool:
+       name: Default
+       demands:
+       - mycap1
 
+    variables:
+        solution:  '**/*.sln'
+        buildPlatform: 'Any CPU'
+        buildConfiguration: 'Release'
+
+
+        steps:
+          - task: VSTest@2
+            inputs:
+                platform: '$(buildPlatform)'
+                configuration: '$(buildConfiguration)'
+        
+     
+
+    
+
+ 
