@@ -20,12 +20,4 @@ stages:
          steps:
            - task: VSTest@2
            - script: echo 'Testing application'
-  - stage: Package
-    jobs:
-       - job: Package
-         pool:
-          name: Default
-          demands: mycap
-         steps:
-         - script: echo 'Packaging application' 
-    
+  
