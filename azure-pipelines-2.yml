@@ -1,57 +1,19 @@
 trigger:
 - master
 
+
+pool:
+       name: Default
+       demands: mycap
+
 stages:
-  - stage: Build
+  - stage: Welcome
     jobs:
-      - job: PrintMessage
-        pool:
-          name: Default
-          demands: mycap1
-        steps:
-          - script: echo '****************'
-          - script: echo 'starting with test'
-          - script: echo '*****************'
-           
-      - job: Build
-        pool:
-         name: Default
-         demands: mycap
-
-        variables:
-           solution: '**/*.sln'
-           buildPlatform: 'Any CPU'
-           buildConfiguration: 'Release'
- 
-        steps:
-        - task:  NuGetToolInstaller@1
-        - task: NuGetCommand@2
-          inputs:
-            restoreSolution: '$(solution)'
-        - task: VSBuild@1
-          inputs:
-           solution: '$(solution)'
-           platform: '$(buildPlatform)'
-           configuration: '$(buildConfiguration)'
-
-        - script: echo 'Building application'
-        
-  - stage: Test
-    jobs:
-       - job: Test
-         pool:
-          name: Default
-          demands: mycap1
-        
-         variables:
-           solution: '**/*.sln'
-           buildPlatform: 'Any CPU'
-           buildConfiguration: 'Release'
-
-         steps:
-           - task: VSTest@2
-             inputs:
-              platform: '$(buildPlatform)'
-              configuration: '$(buildConfiguration)'
-           - script: echo 'Testing application'
-  
+    - job: PrintMessage
+     
+      steps:
+        - script: echo 'Hello To User!!!'
+    - job: AssignTask
+     
+      steps:
+        - script: echo 'Different Tasks are Building ,testing and Packaging'
