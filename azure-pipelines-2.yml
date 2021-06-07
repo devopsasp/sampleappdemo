@@ -10,6 +10,7 @@ pool:
   name: Default
   demands:
   - mycap
+  - mycap1
   
 
 variables:
