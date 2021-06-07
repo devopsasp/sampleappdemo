@@ -4,54 +4,28 @@ trigger:
 stages:
   - stage: Build
     jobs:
-    - job: BuildJob
-      
-  
-      pool:
-       name: Default
-       demands:
-       - mycap
-      variables:
-        solution:  '**/*.sln'
-        buildPlatform: 'Any CPU'
-        buildConfiguration: 'Release'
-        
-        
-
-      steps:
-        - task: NuGetToolInstaller@1
-        - task: NuGetCommand@2
-          inputs:
-           restoreSolution: '$(solution)'
-
+      - job: Build
+        pool:
+         name: Defult
+         demands: mycap
+        steps:
         - task: VSBuild@1
-          inputs: 
-           solution: '$(solution)'
-           platform: '$(buildPlatform)'
-           configuration: '$(buildConfiguration)' 
-          
+        - script: echo 'Building application'
   - stage: Test
     jobs:
-      - job: TestJob
-    pool:
-       name: Default
-       demands:
-       - mycap1
-
-    variables:
-        solution:  '**/*.sln'
-        buildPlatform: 'Any CPU'
-        buildConfiguration: 'Release'
-
-
-        steps:
-          - task: VSTest@2
-            inputs:
-                platform: '$(buildPlatform)'
-                configuration: '$(buildConfiguration)'
-        
-     
-
+       - job: Test
+         pool:
+          name: Default
+          demands: mycap1]
+         steps:
+           - task: VSTest@2
+           - script: echo 'Testing application'
+  - stage: Package
+    jobs:
+       - job: Package
+         pool:
+          name: Default
+          demands: mycap
+         steps:
+         - script: echo 'Packaging application' 
     
-
- 
