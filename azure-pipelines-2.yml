@@ -35,4 +35,4 @@ steps:
     configuration: '$(buildConfiguration)'
 
 
-- task: PublishBuildArtifacts@1
+- task: PublishTestResults@1
