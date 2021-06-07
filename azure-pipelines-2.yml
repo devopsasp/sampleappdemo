@@ -10,7 +10,7 @@ pool:
   name: Default
   demands:
   - mycap
-  - agent.name -equals DESKTOP-1LRH8EH
+  
 
 variables:
   solution: '**/*.sln'
